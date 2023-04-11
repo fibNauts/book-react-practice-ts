@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ListItem } from "./componentes/ListItem";
+import { ListItem } from "./components/ListItem";
 import axios from "axios";
 
 export const App = () => {

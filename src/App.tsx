@@ -16,7 +16,7 @@ export const App = () => {
       { id: 1, name: "nushida", age: 24, personalColor: "blue" },
       { id: 2, name: "sakioka", age: 28, personalColor: "pink" },
       { id: 3, name: "goto", age: 23, personalColor: "green" },
-      { id: 4, name: "sato", age: 20 },
+      { id: 4, name: "sato", age: 20, hobbies: ["soccer", "photo"] },
     ]);
   }, []);
 
@@ -28,6 +28,7 @@ export const App = () => {
           name={user.name}
           age={user.age}
           personalColor={user.personalColor}
+          hobbies={user.hobbies}
         />
       ))}
     </div>

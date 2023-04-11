@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import { ListItem } from "./components/ListItem";
 import axios from "axios";
 
-type User = {
-  id: number;
-  name: string;
-  age: number;
-  personalColor: string;
-};
+import type { User } from "./types/user";
 
 export const App = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -21,6 +16,7 @@ export const App = () => {
       { id: 1, name: "nushida", age: 24, personalColor: "blue" },
       { id: 2, name: "sakioka", age: 28, personalColor: "pink" },
       { id: 3, name: "goto", age: 23, personalColor: "green" },
+      { id: 4, name: "sato", age: 20 },
     ]);
   }, []);
 

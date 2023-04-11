@@ -1,15 +1,15 @@
-type User = {
-  id: number;
-  name: string;
-  age: number;
-  personalColor: string;
-};
+import { FC } from "react";
+import type { User } from "../types/user";
 
-export const ListItem = (props: User) => {
+export const ListItem: FC<User> = (props) => {
   const { id, name, age, personalColor } = props;
   return (
     <p style={{ color: personalColor }}>
       {id}:{name}({age})
     </p>
   );
+};
+
+ListItem.defaultProps = {
+  personalColor: "grey",
 };

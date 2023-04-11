@@ -9,7 +9,6 @@ type User = {
   personalColor: string;
 };
 
-
 export const App = () => {
   const [users, setUsers] = useState<User[]>([]);
 
@@ -18,7 +17,7 @@ export const App = () => {
     //      setUsers(res.data);
     //    });
 
-    setUsers<User[]>([
+    setUsers([
       { id: 1, name: "nushida", age: 24, personalColor: "blue" },
       { id: 2, name: "sakioka", age: 28, personalColor: "pink" },
       { id: 3, name: "goto", age: 23, personalColor: "green" },
@@ -28,7 +27,12 @@ export const App = () => {
   return (
     <div>
       {users.map((user) => (
-        <ListItem id={user.id} name={user.nama} age={user.age} />
+        <ListItem
+          id={user.id}
+          name={user.name}
+          age={user.age}
+          personalColor={user.personalColor}
+        />
       ))}
     </div>
   );
